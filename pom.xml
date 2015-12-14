@@ -55,6 +55,14 @@
 		<finalName>user_mgmt</finalName>
 		<plugins>
 			<plugin>
+				<groupId>com.heroku.sdk</groupId>
+				<artifactId>heroku-maven-plugin</artifactId>
+				<version>0.5.7</version>
+				<configuration>
+					<appName>user_mgmt</appName>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
 				<version>9.2.11.v20150529</version>
@@ -73,11 +81,6 @@
 					<source>${java-version}</source>
 					<target>${java-version}</target>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>com.heroku.sdk</groupId>
-				<artifactId>heroku-maven-plugin</artifactId>
-				<version>0.5.7</version>
 			</plugin>
 		</plugins>
 	</build>
