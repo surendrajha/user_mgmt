@@ -16,13 +16,16 @@ public class UserFormValidator implements Validator {
 	private Pattern pattern;
 	private Matcher matcher;
 
-	private static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+	private static final String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+			+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 	String MOBILE_PATTERN = "[0-9]{10}";
 
+	@Override
 	public boolean supports(Class<?> clazz) {
 		return UserForm.class.isAssignableFrom(clazz);
 	}
 
+	@Override
 	public void validate(Object obj, Errors errors) {
 
 		UserForm user = (UserForm) obj;

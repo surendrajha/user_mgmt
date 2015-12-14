@@ -58,9 +58,9 @@
 				<groupId>com.heroku.sdk</groupId>
 				<artifactId>heroku-maven-plugin</artifactId>
 				<version>0.5.7</version>
-				<configuration>
-					<appName>user_mgmt</appName>
-				</configuration>
+				<!-- <configuration> -->
+				<!-- <appName>skjha</appName> -->
+				<!-- </configuration> -->
 			</plugin>
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>

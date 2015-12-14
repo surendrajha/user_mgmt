@@ -72,6 +72,7 @@ public class UserDaoImpl implements UserDao {
 
 	private static final class UserMapper implements RowMapper<Users> {
 
+		@Override
 		public Users mapRow(ResultSet rs, int rowNum) throws SQLException {
 			Users user = new Users();
 			user.setId(rs.getLong("id"));
